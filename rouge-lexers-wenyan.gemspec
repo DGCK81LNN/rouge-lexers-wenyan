@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "rouge-lexers-wenyan"
-  s.version  = "1.4.1"
+  s.version  = "1.4.2"
   s.summary  =
     "Rouge lexer for Wenyan, programming language for the ancient Chinese"
   s.description = <<~END
