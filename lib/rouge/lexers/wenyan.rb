@@ -45,23 +45,24 @@ module Rouge
       state :keywords do # mixin
         # special handling for some keywords
         rule %r/([吾今]有)(\s*)(一)(\s*)(術)/ do
-          groups Keyword::Declaration, Text, Literal::Number, Text, Keyword::Type
+          groups Keyword::Declaration, Text, Literal::Number, Text, \
+            Keyword::Type
           push do
             mixin :whitespace
             rule %r/(名之曰)(\s*)(「)(\s*)(#{id_regex})(\s*)(」)/ do
-              groups Keyword::Declaration, Text, Punctuation, Text, Name::Function, \
-                Text, Punctuation
+              groups Keyword::Declaration, Text, Punctuation, Text, \
+                Name::Function, Text, Punctuation
             end
             rule %r//, Text, :pop!
           end
         end
         rule %r/(是謂)(\s*)(「)(\s*)(#{id_regex})(\s*)(」)(\s*)(之術也)/ do
-          groups Keyword::Declaration, Text, Punctuation, Text, Name::Function, Text,\
-            Punctuation, Text, Keyword::Declaration
+          groups Keyword::Declaration, Text, Punctuation, Text, \
+            Name::Function, Text, Punctuation, Text, Keyword::Declaration
         end
         rule %r/(施|以施)(\s*)(「)(\s*)(#{id_regex})(\s*)(」)/ do
-          groups Keyword, Text, Punctuation, Text, Name::Function, Text, \
-            Punctuation
+          groups Operator::Word, Text, Punctuation, Text, Name::Function, \
+            Text, Punctuation
         end
         mixin :macro_definition
         rule %r/[注疏批]曰/, Comment, :comment_start
@@ -79,7 +80,7 @@ module Rouge
         declare5   = %w[ 乃行是術曰 今不復存矣 ]
         types      = %w[ 數 言 爻 列 術 物 元 ]
         operators1 = %w[ 以 於 加 減 乘 除 變 充 銜 之 施 取 ]
-        operators2 = %w[ 書之 等於 大於 小於 之長 中之 ]
+        operators2 = %w[ 書之 等於 大於 小於 之長 中之 以施 ]
         operators3 = %w[ 不等於 不大於 不小於 之其餘 ]
         operators4 = %w[ 所餘幾何 中有陽乎 中無陰乎 ]
 
