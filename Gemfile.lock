@@ -1,22 +1,23 @@
 PATH
   remote: .
   specs:
-    rouge (4.0.0)
-    rouge-lexers-wenyan (1.4.1)
+    rouge-lexers-wenyan (1.4.2)
       rouge (>= 3.0, < 5.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    minitest (5.16.3)
+    minitest (5.18.0)
     minitest-power_assert (0.3.1)
       minitest
       power_assert (>= 1.1)
-    power_assert (2.0.1)
+    power_assert (2.0.3)
     rake (13.0.6)
+    rouge (4.1.1)
 
 PLATFORMS
   x86-mingw32
+  x86_64-linux
 
 DEPENDENCIES
   minitest (~> 5.16)
