@@ -4,7 +4,7 @@
 
 [Rouge]: https://github.com/rouge-ruby/rouge
 [Wenyan]: https://wy-lang.org/
-[Example]: https://dgck81lnn.github.io/blog/posts/220118_wenyan_stdin
+[Example]: https://dgck81lnn.github.io/blog/posts/220906_wenyan_stdin_examples
 
 ## Installation
 
